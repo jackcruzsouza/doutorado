@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     Subcorpora_Final-weka.filters.unsupervised.attribute.Remove-R1-2,4-weka.filters.unsupervised.attribute.Remove-R2-4-weka.filters.unsupervised.attribute.Remove-R7,11-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R18-27
+Instances:    228
+Attributes:   17
+              RELACAO
+              MORF_ExprNom
+              MORF_Num
+              MORF_Prep
+              MORF_VerbDiz
+              TEMP_TempVerb
+              SEM_CausEfe
+              SEM_PartTod
+              SEM_Hipo
+              SEM_ExpTemp
+              SINT_AdjAdv
+              SINT_ExprSuper
+              SINT_OraAdit
+              SINT_OraExpli
+              SINT_OraObjDir
+              SINT_DiscurReport
+              SINT_OraReduz
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SEM_ExpTemp:
+	N	-> ELAB
+	S	-> HB
+(133/228 instances correct)
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         133               58.3333 %
+Incorrectly Classified Instances        95               41.6667 %
+Kappa statistic                          0.375 
+Mean absolute error                      0.2778
+Root mean squared error                  0.527 
+Relative absolute error                 62.4868 %
+Root relative squared error            111.7786 %
+Total Number of Instances              228     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,434    0,535      1,000    0,697      0,550    0,783     0,535     ELAB
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,333     FU
+                 0,750    0,191    0,663      0,750    0,704      0,544    0,780     0,580     HB
+Weighted Avg.    0,583    0,208    ?          0,583    ?          ?        0,688     0,483     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 76  0  0 |  a = ELAB
+ 47  0 29 |  b = FU
+ 19  0 57 |  c = HB
+

@@ -1,0 +1,96 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -M 3 -C 0.5 -Q 1
+Relation:     Subcorpora_Final-weka.filters.unsupervised.attribute.Remove-R1-2,4-weka.filters.unsupervised.attribute.Remove-R2-4-weka.filters.unsupervised.attribute.Remove-R7,11-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R18-27
+Instances:    228
+Attributes:   17
+              RELACAO
+              MORF_ExprNom
+              MORF_Num
+              MORF_Prep
+              MORF_VerbDiz
+              TEMP_TempVerb
+              SEM_CausEfe
+              SEM_PartTod
+              SEM_Hipo
+              SEM_ExpTemp
+              SINT_AdjAdv
+              SINT_ExprSuper
+              SINT_OraAdit
+              SINT_OraExpli
+              SINT_OraObjDir
+              SINT_DiscurReport
+              SINT_OraReduz
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+SINT_ExprSuper = N AND
+SEM_ExpTemp = S AND
+MORF_VerbDiz = N AND
+TEMP_TempVerb = N AND
+SINT_AdjAdv = N: HB (36.0/5.0)
+
+SINT_ExprSuper = N AND
+SEM_ExpTemp = N AND
+TEMP_TempVerb = N AND
+MORF_VerbDiz = N AND
+MORF_Num = N AND
+SEM_Hipo = N AND
+SINT_OraObjDir = N AND
+SINT_AdjAdv = N AND
+SINT_OraExpli = N: ELAB (66.0/20.0)
+
+SINT_ExprSuper = S: HB (26.0)
+
+SEM_Hipo = S: ELAB (6.0)
+
+SINT_OraExpli = N AND
+SINT_OraObjDir = S AND
+SINT_DiscurReport = S: ELAB (4.0)
+
+SINT_OraReduz = N AND
+SINT_OraExpli = N: FU (74.0/18.0)
+
+SINT_AdjAdv = N AND
+SINT_OraReduz = N: HB (10.0/4.0)
+
+SINT_AdjAdv = N: ELAB (3.0)
+
+: FU (3.0/1.0)
+
+Number of Rules  : 	9
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         164               71.9298 %
+Incorrectly Classified Instances        64               28.0702 %
+Kappa statistic                          0.5789
+Mean absolute error                      0.2427
+Root mean squared error                  0.366 
+Relative absolute error                 54.5935 %
+Root relative squared error             77.6233 %
+Total Number of Instances              228     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,737    0,204    0,644      0,737    0,687      0,517    0,856     0,670     ELAB
+                 0,592    0,112    0,726      0,592    0,652      0,509    0,785     0,660     FU
+                 0,829    0,105    0,797      0,829    0,813      0,717    0,877     0,847     HB
+Weighted Avg.    0,719    0,140    0,722      0,719    0,717      0,581    0,840     0,726     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 56 13  7 |  a = ELAB
+ 22 45  9 |  b = FU
+  9  4 63 |  c = HB
+

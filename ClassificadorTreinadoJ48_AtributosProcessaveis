@@ -1,0 +1,87 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.5 -M 3
+Relation:     Subcorpora_Final-weka.filters.unsupervised.attribute.Remove-R1-2,4-weka.filters.unsupervised.attribute.Remove-R2-4-weka.filters.unsupervised.attribute.Remove-R7,11-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R18-27
+Instances:    228
+Attributes:   17
+              RELACAO
+              MORF_ExprNom
+              MORF_Num
+              MORF_Prep
+              MORF_VerbDiz
+              TEMP_TempVerb
+              SEM_CausEfe
+              SEM_PartTod
+              SEM_Hipo
+              SEM_ExpTemp
+              SINT_AdjAdv
+              SINT_ExprSuper
+              SINT_OraAdit
+              SINT_OraExpli
+              SINT_OraObjDir
+              SINT_DiscurReport
+              SINT_OraReduz
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+SINT_ExprSuper = N
+|   SEM_ExpTemp = N
+|   |   TEMP_TempVerb = N
+|   |   |   MORF_VerbDiz = N
+|   |   |   |   MORF_Num = N
+|   |   |   |   |   SINT_OraObjDir = N
+|   |   |   |   |   |   SINT_AdjAdv = N
+|   |   |   |   |   |   |   SINT_OraExpli = N: ELAB (72.0/20.0)
+|   |   |   |   |   |   |   SINT_OraExpli = S: HB (10.0/4.0)
+|   |   |   |   |   |   SINT_AdjAdv = S: FU (9.0/4.0)
+|   |   |   |   |   SINT_OraObjDir = S: ELAB (6.0)
+|   |   |   |   MORF_Num = S: FU (5.0/2.0)
+|   |   |   MORF_VerbDiz = S: FU (17.0/7.0)
+|   |   TEMP_TempVerb = S: FU (20.0/3.0)
+|   SEM_ExpTemp = S
+|   |   MORF_VerbDiz = N
+|   |   |   TEMP_TempVerb = N
+|   |   |   |   SINT_AdjAdv = N: HB (36.0/5.0)
+|   |   |   |   SINT_AdjAdv = S: FU (6.0/1.0)
+|   |   |   TEMP_TempVerb = S: FU (13.0/2.0)
+|   |   MORF_VerbDiz = S: FU (8.0)
+SINT_ExprSuper = S: HB (26.0)
+
+Number of Leaves  : 	12
+
+Size of the tree : 	23
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         172               75.4386 %
+Incorrectly Classified Instances        56               24.5614 %
+Kappa statistic                          0.6316
+Mean absolute error                      0.2309
+Root mean squared error                  0.3516
+Relative absolute error                 51.9317 %
+Root relative squared error             74.56   %
+Total Number of Instances              228     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,750    0,171    0,687      0,750    0,717      0,567    0,869     0,690     ELAB
+                 0,697    0,112    0,757      0,697    0,726      0,598    0,828     0,695     FU
+                 0,816    0,086    0,827      0,816    0,821      0,733    0,869     0,839     HB
+Weighted Avg.    0,754    0,123    0,757      0,754    0,755      0,633    0,856     0,741     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 57 13  6 |  a = ELAB
+ 16 53  7 |  b = FU
+ 10  4 62 |  c = HB
+

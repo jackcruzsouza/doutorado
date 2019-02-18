@@ -1,0 +1,97 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -M 3 -C 0.5 -Q 1
+Relation:     Subcorpora_Final-weka.filters.unsupervised.attribute.Remove-R1-2,4
+Instances:    228
+Attributes:   33
+              RELACAO
+              AN_Assoc
+              AN_Nom
+              EST_LeiClus
+              MORF_ExprNom
+              MORF_Num
+              MORF_Prep
+              MORF_VerbDiz
+              TEMP_TempVerb
+              SEM_CampSem
+              SEM_CausEfe
+              SEM_PartTod
+              SEM_Hipo
+              SEM_SemaLex
+              SEM_ExpTemp
+              SINT_TemaRema
+              SINT_AdjAdv
+              SINT_ExprSuper
+              SINT_OraAdit
+              SINT_OraExpli
+              SINT_OraObjDir
+              SINT_DiscurReport
+              SINT_OraReduz
+              TRA_DetEvent
+              TRA_EventPos
+              TRA_FatPontu
+              TRA_Freq
+              TRA_InfAdic
+              TRA_PrevEvent
+              TRA_ProjFutu
+              TRA_ProlongEvent
+              TRA_ConhecMund
+              TRA_SimEvent
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+TRA_SimEvent = N AND
+TRA_Freq = N AND
+TRA_FatPontu = N AND
+TRA_EventPos = N AND
+SEM_ExpTemp = N AND
+TRA_ProlongEvent = N AND
+TRA_ProjFutu = N AND
+TEMP_TempVerb = N: ELAB (80.0/7.0)
+
+TRA_EventPos = N AND
+TEMP_TempVerb = N AND
+SEM_CampSem = N AND
+TRA_DetEvent = N AND
+TRA_Freq = S: HB (38.0)
+
+TRA_FatPontu = N: FU (72.0/3.0)
+
+: HB (38.0)
+
+Number of Rules  : 	4
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         213               93.4211 %
+Incorrectly Classified Instances        15                6.5789 %
+Kappa statistic                          0.9013
+Mean absolute error                      0.0692
+Root mean squared error                  0.1987
+Relative absolute error                 15.5711 %
+Root relative squared error             42.1424 %
+Total Number of Instances              228     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,961    0,059    0,890      0,961    0,924      0,885    0,949     0,844     ELAB
+                 0,842    0,020    0,955      0,842    0,895      0,851    0,924     0,873     FU
+                 1,000    0,020    0,962      1,000    0,981      0,971    0,995     0,978     HB
+Weighted Avg.    0,934    0,033    0,936      0,934    0,933      0,902    0,956     0,898     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 73  3  0 |  a = ELAB
+  9 64  3 |  b = FU
+  0  0 76 |  c = HB
+
